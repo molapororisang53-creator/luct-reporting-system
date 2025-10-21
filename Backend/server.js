@@ -7,10 +7,14 @@ app.use(cors());
 app.use(express.json()); 
 
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "@123",
-    database: "test_schema"
+    host: "gateway01.ap-northeast-1.prod.aws.tidbcloud.com", // From TiDB Cloud
+    port: 4000,
+    user: "2zhpTVGS8EqQwQp.root", // From TiDB Cloud  
+    password: "QZatPakrIzSxVo1L", // Your TiDB password
+    database: "test", // Using your existing database
+    ssl: {
+        rejectUnauthorized: true
+    }
 });
 
 let dbConnected = false;
