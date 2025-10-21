@@ -23,7 +23,7 @@ const APP_COLORS = {
 };
 
 // API base URL for easier configuration
-const API_BASE = 'http://localhost:8081';
+const API_BASE = 'https://luct-reporting-system-zbqa.onrender.com';
 
 function App() {
   const [page, setPage] = useState("home");
